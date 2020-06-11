@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="COMANDATA_DATABASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="REGISTRO">
+          <Key>
+            <PropertyRef Name="NOMBRE" />
+          </Key>
+          <Property Name="NOMBRE" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="APELLIDO" Type="varchar" MaxLength="30" />
+          <Property Name="DIRECCCION" Type="varchar" MaxLength="60" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="15" />
+          <Property Name="SALARIO" Type="int" />
+          <Property Name="AREA" Type="varchar" MaxLength="30" />
+          <Property Name="FECHA_INGRESO" Type="datetime" />
+          <Property Name="SEXO" Type="varchar" MaxLength="30" />
+          <Property Name="CODIGO" Type="int" />
+          <Property Name="JEFE" Type="varchar" MaxLength="30" />
+          <Property Name="TRABAJADOR_A_CARGO" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityContainer Name="COMANDATA_DATABASEModelStoreContainer">
+          <EntitySet Name="REGISTRO" EntityType="Self.REGISTRO" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="COMANDATA_DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="REGISTRO">
+          <Key>
+            <PropertyRef Name="NOMBRE" />
+          </Key>
+          <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCCION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="SALARIO" Type="Int32" />
+          <Property Name="AREA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_INGRESO" Type="DateTime" Precision="3" />
+          <Property Name="SEXO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="CODIGO" Type="Int32" />
+          <Property Name="JEFE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="TRABAJADOR_A_CARGO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="COMANDATA_DATABASEEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="REGISTRO" EntityType="Self.REGISTRO" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="COMANDATA_DATABASEModelStoreContainer" CdmEntityContainer="COMANDATA_DATABASEEntities">
+          <EntitySetMapping Name="REGISTRO">
+            <EntityTypeMapping TypeName="COMANDATA_DATABASEModel.REGISTRO">
+              <MappingFragment StoreEntitySet="REGISTRO">
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="DIRECCCION" ColumnName="DIRECCCION" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="SALARIO" ColumnName="SALARIO" />
+                <ScalarProperty Name="AREA" ColumnName="AREA" />
+                <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+                <ScalarProperty Name="JEFE" ColumnName="JEFE" />
+                <ScalarProperty Name="TRABAJADOR_A_CARGO" ColumnName="TRABAJADOR_A_CARGO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

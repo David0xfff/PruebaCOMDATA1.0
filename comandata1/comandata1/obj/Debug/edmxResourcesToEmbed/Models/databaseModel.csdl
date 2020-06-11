@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="COMANDATA_DATABASEModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="REGISTRO">
+    <Key>
+      <PropertyRef Name="NOMBRE" />
+    </Key>
+    <Property Name="NOMBRE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="APELLIDO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="DIRECCCION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="TELEFONO" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="SALARIO" Type="Int32" />
+    <Property Name="AREA" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="FECHA_INGRESO" Type="DateTime" Precision="3" />
+    <Property Name="SEXO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="CODIGO" Type="Int32" />
+    <Property Name="JEFE" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="TRABAJADOR_A_CARGO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="COMANDATA_DATABASEEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="REGISTRO" EntityType="Self.REGISTRO" />
+  </EntityContainer>
+</Schema>

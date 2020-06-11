@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="COMANDATA_DATABASEModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="REGISTRO">
+    <Key>
+      <PropertyRef Name="NOMBRE" />
+    </Key>
+    <Property Name="NOMBRE" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="30" />
+    <Property Name="DIRECCCION" Type="varchar" MaxLength="60" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="15" />
+    <Property Name="SALARIO" Type="int" />
+    <Property Name="AREA" Type="varchar" MaxLength="30" />
+    <Property Name="FECHA_INGRESO" Type="datetime" />
+    <Property Name="SEXO" Type="varchar" MaxLength="30" />
+    <Property Name="CODIGO" Type="int" />
+    <Property Name="JEFE" Type="varchar" MaxLength="30" />
+    <Property Name="TRABAJADOR_A_CARGO" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityContainer Name="COMANDATA_DATABASEModelStoreContainer">
+    <EntitySet Name="REGISTRO" EntityType="Self.REGISTRO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
